@@ -1,0 +1,21 @@
+{
+  "name": "naukri",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "smoke": "npx playwright test loginpage.spec.ts",
+    "sanity": "npx playwright test loginpage.spec.ts --grep @search"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2"
+  }
+}

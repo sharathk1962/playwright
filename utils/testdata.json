@@ -1,0 +1,13 @@
+{
+    "urlCred": {
+        "url": "https://www.naukri.com/",
+        "username": "sharath.k1991@gmail.com",
+        "password": "qwerty12334222"
+    },
+    "testData": {
+        "loggedinUserProfileName": "Sharath Kumar",
+        "resumePath": "E:/Sharath/Study/Sharath_Kumar_Resume.pdf",
+        "jobSearchKey": "Automation Java Selenium",
+        "experience": "8 years"
+    }
+}

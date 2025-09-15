@@ -1,0 +1,87 @@
+🔹 Task 1: Launch & Login
+
+Open naukri.com.
+
+Handle multiple popups (Naukri opens several).
+
+Locate and fill email/username and password fields.
+
+Click Login and verify successful login by checking profile icon.
+
+🔹 Task 2: Profile Update (Resume Upload)
+
+Navigate to My Naukri → Profile.
+
+Automate resume upload by selecting a .docx/.pdf file.
+
+Verify the "Resume updated successfully" message.
+
+🔹 Task 3: Job Search Automation
+
+Navigate to Jobs → Search Jobs.
+
+Enter keywords like "Automation Test Engineer Selenium Java".
+
+Apply filters:
+
+Location = Bangalore/Hyderabad/Remote
+
+Experience = 5–10 years
+
+Verify that filtered jobs are displayed.
+
+🔹 Task 4: Save Job Links
+
+From search results, extract:
+
+Job Title
+
+Company Name
+
+Apply Link
+
+Save them into a CSV/Excel for tracking.
+
+🔹 Task 5: Automate Apply
+
+⚠️ Careful here: Direct automation of "Apply" can sometimes trigger bot-detection. So do it safely.
+
+Click on a job listing.
+
+Click Apply button.
+
+Fill in details if a form appears (sometimes it auto-applies).
+
+Capture confirmation message like "Your application has been submitted."
+
+🔹 Task 6: Bulk Apply with Conditions
+
+Loop through 10–15 job links.
+
+Apply only if:
+
+Job Title contains “QA Automation” / “SDET”
+
+Location matches preference
+
+Skip others.
+
+Log all applications into a CSV (Job Title, Company, Date Applied).
+
+🔹 Task 7: Notifications / Reports
+
+After applying, generate a summary report of:
+
+Total jobs applied today
+
+Success count vs failures
+
+Optionally send it via email/Slack using Playwright + NodeMailer.
+
+👉 Pro Tip:
+
+Use page.waitForSelector wisely since Naukri has dynamic ads and modals.
+
+Add stealth-like waits/random delays to mimic human behavior.
+
+Store cookies/session to avoid logging in every time.
