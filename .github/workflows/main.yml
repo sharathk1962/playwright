@@ -1,8 +1,26 @@
+name: Run Playwright Tests (Self Hosted)
+
+on:
+  workflow_dispatch:
+
 jobs:
   test:
     runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Run Playwright Tests
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright Sanity Suite
         run: npm run sanity
