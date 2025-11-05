@@ -26,9 +26,16 @@ test.describe.serial('Naukri Flow', () => {
         // await loginPage.passwordInput.fill(data.urlCred.password);
         await loginPage.usernameInput.fill(username);
         await loginPage.passwordInput.fill(password);
+                        await page.screenshot({ path: 'cred entered.png', fullPage: true });
+
         await loginPage.loginButton.first().click();
+
         // Verify successful login
+        await page.screenshot({ path: 'after-login.png', fullPage: true });
+
         await expect(homePage.viewProfile).toBeVisible();
+        await page.screenshot({ path: 'after-login1.png', fullPage: true });
+
         await expect(homePage.loggedInUser).toHaveText(data.testData.loggedinUserProfileName);
     });
 
