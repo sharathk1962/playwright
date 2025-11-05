@@ -36,7 +36,7 @@ jobs:
           echo "PASSWORD=${{ secrets.APP_PASSWORD }}" >> $GITHUB_ENV
 
       - name: Run Tests
-        run: npm run sanity
+        run: npm run sanity -- --headed
 
       - name: Upload Playwright Report (HTML)
         if: success()
