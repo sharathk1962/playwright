@@ -1,12 +1,20 @@
-name: Playwright CI (Self Hosted)
+name: Playwright CI
 
 on:
   workflow_dispatch:
+   inputs:
+      runner:
+        description: "Select Runner"
+        required: true
+        type: choice
+        options:
+          - github-hosted
+          - self-hosted
+
 
 jobs:
   test:
-    runs-on: self-hosted
-
+    runs-on: ${{ github.event.inputs.runner == 'self-hosted' && 'self-hosted' || 'windows-latest' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
