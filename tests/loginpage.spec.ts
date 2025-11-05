@@ -6,8 +6,8 @@ import * as dotenv from 'dotenv';
 const data = JSON.parse(JSON.stringify(require("../utils/testdata.json")));
 // Load .env variables
 dotenv.config();
-const username = process.env.usernametoLogin as string;
-const password = process.env.password as string;
+const username = process.env.USERNAMETOLOGIN as string;
+const password = process.env.PASSWORD as string;
 
 if (!password || !username) {
     throw new Error("❌ Missing username/Password. Please set it in .env file.");
