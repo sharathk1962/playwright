@@ -16,7 +16,7 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ github.event.inputs.runner == 'self-hosted' && 'self-hosted' || 'ubuntu-latest' }}
+    runs-on: ${{ github.event.inputs.runner == 'self-hosted' && 'self-hosted' || 'macos-latest' }}
 
     steps:
       - name: Checkout
