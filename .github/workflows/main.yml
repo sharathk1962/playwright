@@ -1,5 +1,7 @@
 name: Playwright CI
-
+env:
+  USERNAMETOLOGIN: ${{ secrets.USERNAMETOLOGIN }}
+  PASSWORD: ${{ secrets.PASSWORD }}
 on:
   workflow_dispatch:
     inputs:
