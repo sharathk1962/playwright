@@ -27,6 +27,8 @@ test.describe.serial('Naukri Flow', () => {
         await loginPage.usernameInput.fill(username);
         await loginPage.passwordInput.fill(password);
                         await page.screenshot({ path: 'cred entered.png', fullPage: true });
+console.log("🧩 Username:", username ? "✅ loaded" : "❌ missing");
+console.log("🧩 Password:", password ? "✅ loaded" : "❌ missing");
 
         await loginPage.loginButton.first().click();
 
