@@ -1,5 +1,8 @@
 name: Playwright CI
+
 env:
+  echo "USERNAMETOLOGIN: $USERNAMETOLOGIN"
+  echo "PASSWORD: $PASSWORD"
   USERNAMETOLOGIN: ${{ secrets.USERNAMETOLOGIN }}
   PASSWORD: ${{ secrets.PASSWORD }}
 on:
