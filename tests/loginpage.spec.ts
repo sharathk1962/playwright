@@ -19,8 +19,10 @@ test.describe.serial('Naukri Flow', () => {
         page = await browser.newPage();
         const loginPage = new LoginPage(page);
         const homePage = new HomePage(page);
-        await page.goto(data.urlCred.url);
-        await page.locator('a#login_Layer').click();
+       await page.goto(data.urlCred.url, { waitUntil: 'networkidle' });
+await page.waitForSelector('a#login_Layer', { timeout: 60000 });
+await page.locator('a#login_Layer').click();
+
         // Fill in the username and password fields from json file
         // await loginPage.usernameInput.fill(data.urlCred.username);
         // await loginPage.passwordInput.fill(data.urlCred.password);
